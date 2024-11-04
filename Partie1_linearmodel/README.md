@@ -12,3 +12,9 @@
 Le projet est organisé comme suit :
 A FAIRRRRE
 
+
+## Ce que j'ai fait
+J'ai regardé les données sur 'Teest_projet.py' identifié un peu les colonnes
+
+## Ce qu'il faut faire 
+Nettoyer les données ? (pas encore à mon avis puisque je ne sais pas quelles variables sont pertinentes)
