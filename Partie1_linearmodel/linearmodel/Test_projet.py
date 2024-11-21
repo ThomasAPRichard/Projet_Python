@@ -9,13 +9,6 @@ import seaborn as sns
 data_path = "C:/Users/tapri/OneDrive/Bureau/Master_1/Python/Projet_Python/Partie1_linearmodel/vehicles.csv"
 data = pd.read_csv(data_path)
 
-# Histogramme pour la variable 'Emission de CO2'
-plt.hist(data['CO2 emissions (g/km)'], bins=30, edgecolor='black')
-plt.title("Distribution des émissions de CO2")
-plt.xlabel("Emission de CO2 (g/km)")
-plt.ylabel("Fréquence")
-plt.show()
+import my_statistics
 
-sns.boxplot(x=data['CO2 emissions (g/km)'])
-plt.title("Boxplot des émissions de CO2")
-plt.show()
+print(my_statistics.variable1_distribution_by_variable2(data,'Vehicle class', 'Make'))
