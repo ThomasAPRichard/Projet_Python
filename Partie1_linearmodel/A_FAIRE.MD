@@ -1,7 +1,7 @@
 ETAPE 1 :
 Nettoyer les données ?
 
-Étape 3 : Analyser les statistiques descriptives
+Étape 3 : Analyser le Combined(mpg ) ?
 Comparer les différentes variables et observer leur distribution.
 Calculer les corrélations : Analyser les corrélations entre les variables pour comprendre les relations.
 
