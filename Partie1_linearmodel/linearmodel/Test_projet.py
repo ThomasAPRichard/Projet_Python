@@ -12,6 +12,18 @@ data = pd.read_csv(data_path)
 
 import my_statistics
 
-data['Eco-efficiency index'] = data['Combined (L/100 km)'] * data['CO2 emissions (g/km)'] #Indicateur global d'efficacité écologique des véhicules
-best_make_ecoefficiency= data.groupby('Make')['Eco-efficiency index'].mean()
-print(f"Le constructeur qui obtient la meilleure note pour notre Eco-efficiency index est {best_make_ecoefficiency.idxmin()} avec une note de {round(best_make_ecoefficiency.min(),0)}")
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
+
+def plot_scatter(data, variable1, variable2): #Scatter de 2 variables numériques
+    plt.figure(figsize=(8, 6))
+    sns.scatterplot(x=variable1, y=variable2, data=data, alpha=0.7,color='skyblue', edgecolor='black')
+    plt.title(f"{variable2} en fonction de {variable1}")
+    plt.xlabel(variable1)
+    plt.ylabel(variable2)
+    plt.grid(alpha=0.5)
+    plt.tight_layout()
+    plt.show()
+plot_scatter(data,'CO2 emissions (g/km)', 'Combined (L/100 km)')
