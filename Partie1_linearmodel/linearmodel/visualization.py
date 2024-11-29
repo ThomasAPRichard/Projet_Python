@@ -1,4 +1,4 @@
-# DANS CE SCRIPT JE RASSEMBLE LES OUTILS STATISTIQUES POUR ANALYSER LE JEU DE DONNEES
+# DANS CE SCRIPT JE RASSEMBLE LES OUTILS DE VISUALISATION POUR ANALYSER LE JEU DE DONNEES
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -60,34 +60,26 @@ def plot_scatter(data, variable1, variable2): #Scatter de 2 variables numérique
     plt.show()
 
 #2. PARTIE EXECUTABLE
-if __name__ == "__main__":
+data_path = "C:/Users/tapri/OneDrive/Bureau/Master_1/Python/Projet_Python/Partie1_linearmodel/vehicles.csv"
+data = pd.read_csv(data_path)
+#La heatmap
+'''plot_correlation_heatmap(data)
+#Histogramme
+plot_histogram(data,'CO2 emissions (g/km)')
+plot_histogram(data,'Combined (L/100 km)')
+plot_histogram(data,'Fuel type')
+#Boxplot
+plot_boxplot(data, 'City (L/100 km)', 'Cylinders')
+plot_boxplot(data, 'CO2 emissions (g/km)', 'Vehicle class')
+plot_boxplot(data, 'CO2 rating', 'Make')
+#Graphique bar des moyennes
+plot_bar(data, variable1='Vehicle class', variable2='CO2 emissions (g/km)')
+plot_bar(data, variable1='Engine size (L)', variable2='CO2 rating')
+plot_bar(data, 'Make', 'Smog rating')
+#Scatter
+plot_scatter(data, variable1='City (L/100 km)', variable2='Highway (L/100 km)') #changer
+plot_scatter(data, variable1='Combined (L/100 km)', variable2='CO2 emissions (g/km)')
+plot_scatter(data, 'Combined (L/100 km)', 'Combined (mpg)')
+'''
 
-    data_path = "C:/Users/tapri/OneDrive/Bureau/Master_1/Python/Projet_Python/Partie1_linearmodel/vehicles.csv"
-    data = pd.read_csv(data_path)
-    #La heatmap
-    plot_correlation_heatmap(data)
-    #Histogramme
-    fig, axs = plt.subplots(1, 3, figsize=(18, 6))  # Une ligne, trois colonnes
-    plot_histogram(data, variable='CO2 emissions (g/km)', ax=axs[0])
-    plot_histogram(data, variable='Combined (L/100 km)', ax=axs[1])
-    plot_histogram(data, variable='Fuel type', ax=axs[2])
-    plt.tight_layout()
-    plt.show()
-    '''
-    plot_histogram(data,'CO2 emissions (g/km)')
-    plot_histogram(data,'Combined (L/100 km)')
-    plot_histogram(data,'Fuel type')
-    ''' 
-    #Boxplot
-
-    plot_boxplot(data, 'City (L/100 km)', 'Cylinders')
-    plot_boxplot(data, 'CO2 emissions (g/km)', 'Vehicle class')
-    plot_boxplot(data, 'CO2 rating', 'Make')
-    #Graphique bar des moyennes
-    plot_bar(data, variable1='Vehicle class', variable2='CO2 emissions (g/km)')
-    plot_bar(data, variable1='Engine size (L)', variable2='CO2 rating')
-    plot_bar(data, 'Make', 'Smog rating')
-    #Scatter
-    plot_scatter(data, variable1='City (L/100 km)', variable2='Highway (L/100 km)') #changer
-    plot_scatter(data, variable1='Combined (L/100 km)', variable2='CO2 emissions (g/km)')
-    plot_scatter(data, 'Combined (L/100 km)', 'Combined (mpg)')
+plot_bar(data, 'Model year', 'CO2 emissions (g/km)')
