@@ -63,13 +63,13 @@ def plot_scatter(data, variable1, variable2): #Scatter de 2 variables numérique
 data_path = "C:/Users/tapri/OneDrive/Bureau/Master_1/Python/Projet_Python/Partie1_linearmodel/vehicles.csv"
 data = pd.read_csv(data_path)
 #La heatmap
-'''plot_correlation_heatmap(data)
+plot_correlation_heatmap(data)
 #Histogramme
 plot_histogram(data,'CO2 emissions (g/km)')
 plot_histogram(data,'Combined (L/100 km)')
 plot_histogram(data,'Fuel type')
 #Boxplot
-plot_boxplot(data, 'City (L/100 km)', 'Cylinders')
+plot_bar(data, 'Model year', 'CO2 emissions (g/km)')
 plot_boxplot(data, 'CO2 emissions (g/km)', 'Vehicle class')
 plot_boxplot(data, 'CO2 rating', 'Make')
 #Graphique bar des moyennes
@@ -80,6 +80,5 @@ plot_bar(data, 'Make', 'Smog rating')
 plot_scatter(data, variable1='City (L/100 km)', variable2='Highway (L/100 km)') #changer
 plot_scatter(data, variable1='Combined (L/100 km)', variable2='CO2 emissions (g/km)')
 plot_scatter(data, 'Combined (L/100 km)', 'Combined (mpg)')
-'''
 
-plot_bar(data, 'Model year', 'CO2 emissions (g/km)')
+
