@@ -1,0 +1,4 @@
+Le calculateur présenté ici souffre d'un problème de précision : 
+Pour les aliments, j'ai fais la moyenne d'émission C02 de chaque 'main_type'. Ainsi, lorsque le restaurateur indique ses achat de 'Viandes, oeufs, poissons' son émission estimée sera sous estimée si il n'a acheté que du boeuf et sur estimée s'il n'a acheté que des oeufs.
+
+J'avais auparavant fait d'autres versions + précises, en cherchant à lier les différentes lignes entre elles de façon pertinentes, mais à chaque fois c'était impossible de descendre sous la barre des 100 entrées utilisateur, qui me semble être l'ultra maximum qu'on puisse demander sans avoir un outil débile.
