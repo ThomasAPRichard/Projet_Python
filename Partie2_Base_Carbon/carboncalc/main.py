@@ -75,6 +75,7 @@ print(f" - Équipements ({periode}) : {total_equipements/1000:.2f} tonneCO2")
 print(f"\nVotre empreinte carbone totale estimée sur une période {periode} est de : {total::.2f} tonneCO2")
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
+
 #2. Visualisations
 vz.visualiser_emissions_bar(total_aliments, total_energie, total_equipements)
 vz.visualiser_emissions_circulaire(total_aliments, total_energie, total_equipements)

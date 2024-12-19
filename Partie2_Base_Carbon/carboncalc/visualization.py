@@ -2,45 +2,32 @@
 
 import matplotlib.pyplot as plt
 
-def visualiser_emissions_bar(aliments_emission, energie_emission, equipements_emission):
+
+def visualiser_emissions_2(total_aliments, total_energie, total_equipements):
     '''
-    Affiche un graphique à barres représentant la répartition des émissions de CO₂.
+    Affiche les visualisations des émissions (barres et circulaire) sur le même graphique.
 
     Paramètres :
-        aliments_emission (float) : Émissions de CO₂ pour la catégorie Aliments.
-        energie_emission (float) : Émissions de CO₂ pour la catégorie Énergie.
-        equipements_emission (float) : Émissions de CO₂ pour la catégorie Équipements.
+        total_aliments (float) : Émissions de CO₂ pour les aliments.
+        total_energie (float) : Émissions de CO₂ pour l'énergie.
+        total_equipements (float) : Émissions de CO₂ pour les équipements.
 
     Retourne :
         None
     '''
     categories = ['Aliments', 'Énergie', 'Équipements']
-    emissions = [aliments_emission, energie_emission, equipements_emission]
+    emissions = [total_aliments, total_energie, total_equipements]
 
-    plt.bar(categories, emissions)
-    plt.title("Répartition des émissions de CO₂")
-    plt.ylabel("Émissions (kgCO₂)")
+    fig, axes = plt.subplots(1, 2, figsize=(12, 6))
+
+    axes[0].bar(categories, emissions, color=['blue', 'red', 'green'])
+    axes[0].set_title("Répartition des émissions de CO2")
+    axes[0].set_ylabel("Émissions (kgCO₂)")
+
+    axes[1].pie(emissions, labels=categories, autopct='%1.1f%%', colors=['blue', 'red', 'green'])
+    axes[1].set_title("Répartition des émissions de CO2")
+
+    plt.tight_layout()
     plt.show()
 
-
-def visualiser_emissions_circulaire(aliments_emission, energie_emission, equipements_emission):
-    '''
-    Affiche un graphique circulaire représentant la répartition des émissions de CO₂ par catégorie.
-
-    Paramètres :
-        aliments_emission (float) : Émissions de CO₂ pour la catégorie Aliments.
-        energie_emission (float) : Émissions de CO₂ pour la catégorie Énergie.
-        equipements_emission (float) : Émissions de CO₂ pour la catégorie Équipements.
-
-    Retourne :
-        None
-    '''
-    categories = ['Aliments', 'Énergie', 'Équipements']
-    emissions = [aliments_emission, energie_emission, equipements_emission]
-
-    plt.figure(figsize=(8, 6))
-    plt.pie(emissions, labels=categories, autopct='%1.1f%%', startangle=140)
-    plt.title("Répartition des émissions de CO₂ par catégorie")
-    plt.show()
-
-# End-of-file (EOF)
+#End-of-file
